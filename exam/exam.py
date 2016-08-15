@@ -6,21 +6,30 @@ def hello(name):
 
 # sentence の文字数を出力してください
 def length(sentence):
+    s = sentence
+    print(len(s))
+    """
     sentence = 'Dive into python3!'
     print('18')
     self.reset_stdout()
     sentence = 'Python Tutorial'
     print('15')
+    """
     pass
 
 
 # sentence の2文字目から5文字目まで(5文字目は含まない)を出力してください
 def slicing2to5(sentence):
     sentence = 'Dive into python3!'
+    print('sentence[2:5] \n')
+    sentence = 'Python Tutorial'
+    print('sentence[2:5] \n')
+    """sentence = 'Dive into python3!'
     print('ve')
     self.reset_stdout()
     sentence = 'Python Tutorial'
     print('tho')
+    """
     pass
 
 
@@ -31,17 +40,38 @@ def number_sign(number):
 
 # number が素数なら'ok',そうでないなら'ng'と出力してください
 def prime_number(number):
+    counter = 0
+    primes = []
+
+    for n in range(2, 1001):
+        prime = True
+        for i in range(2, n):
+            counter += 1
+            if n % i == 0:
+                prime = False
+                break
+            if prime:
+                primes.append(n)
+
+    print(primes, len(primes))
+    print(u'除算を行った回数:%d' % counter)
     pass
 
 
 # 1からnumberまでの合計を出力してください
 def sum_from_1_to(number):
-    pass
+    ans = 0
+    for i in range(number+1):
+        ans += i
+    return ans
+pass
 
 
 # numberの階乗(factorial)を出力してください
 def factorial(number):
-    pass
+    if number == 0: return 1
+    return number * factorial(number-1)
+pass
 
 
 # リストdataの各要素(整数)を3乗した結果をリスト型として返してください

@@ -68,6 +68,21 @@ class Paddle:
         self.x = 2
 
 
+class Block:
+    def __init__(self, canvas, x, y, color):
+        self.canvas = canvas
+        self.pos_x = x
+        self.pos_y = y
+        self.id = canvas.create_rectangle(0, 0, 70, 30, fill=color,outline='white')
+
+    def delete(self):
+        self.canvas.delete(self)
+
+
+class Check:
+    def __init__(self, block):
+        self.block = block
+
 tk = Tk()
 tk.title("Game")
 tk.resizable(0, 0)
@@ -78,7 +93,6 @@ tk.update()
 
 p = Paddle(c, 'blue')
 ball = Ball(c, p, 'red')
-
 
 def update():
     if not ball.hit_bottom:
