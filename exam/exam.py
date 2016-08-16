@@ -8,28 +8,12 @@ def hello(name):
 def length(sentence):
     s = sentence
     print(len(s))
-    """
-    sentence = 'Dive into python3!'
-    print('18')
-    self.reset_stdout()
-    sentence = 'Python Tutorial'
-    print('15')
-    """
     pass
 
 
 # sentence の2文字目から5文字目まで(5文字目は含まない)を出力してください
 def slicing2to5(sentence):
-    sentence = 'Dive into python3!'
-    print('sentence[2:5] \n')
-    sentence = 'Python Tutorial'
-    print('sentence[2:5] \n')
-    """sentence = 'Dive into python3!'
-    print('ve')
-    self.reset_stdout()
-    sentence = 'Python Tutorial'
-    print('tho')
-    """
+    print(sentence[2:5])
     pass
 
 
@@ -69,13 +53,16 @@ pass
 
 # numberの階乗(factorial)を出力してください
 def factorial(number):
-    if number == 0: return 1
+    if number == 0:
+        return 1
     return number * factorial(number-1)
 pass
 
 
 # リストdataの各要素(整数)を3乗した結果をリスト型として返してください
 def cubic_list(data):
+    data = ([1, 2, 3, 4, 5])
+    cubic_list = [x**3 for x in range(1, 5)]
     pass
 
 
@@ -101,14 +88,21 @@ def point_two_digits(a, b, c):
 
 # リストdataの内容を小さい順でソートした結果を返してください
 def list_sort(data):
+
     pass
 
 
 # 文字列の並びを逆にしたものを返してください
 def reverse_string(sentence):
+    print(sentence[::-1])
     pass
 
 
 # dateから2016年4月1日までの日数を返してください
+from datetime import date
+
+
 def days_from_date(point):
+    d1, d2 = date(days_from_date), date(2016, 4, 1)
+    str(d2 - d1)
     pass
