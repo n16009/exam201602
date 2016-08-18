@@ -19,6 +19,12 @@ def slicing2to5(sentence):
 
 # number の符号を出力してください。ただし、0は'0'と出力してください
 def number_sign(number):
+    if number < 0:
+        print("-")
+    elif number == 0:
+        print("'0'")
+    else:
+        print("+")
     pass
 
 
@@ -68,16 +74,19 @@ def cubic_list(data):
 
 # 底辺x,高さyの直角三角形(right angled triangle)の残り1つの辺の長さを返してください
 def calc_hypotenuse(x, y):
+    print(x ** 2 + y ** 2)
     pass
 
 
 # 底辺x,斜辺vの直角三角形の残り1つの辺の長さを返してください
 def calc_subtense(x, v):
+    print(x ** 2 - v ** 2)
     pass
 
 
 # 三辺の長さがそれぞれx,y,zの三角形の面積を返してください
 def calc_area_triangle(x, y, z):
+    print(x * y / 2)
     pass
 
 
@@ -88,7 +97,7 @@ def point_two_digits(a, b, c):
 
 # リストdataの内容を小さい順でソートした結果を返してください
 def list_sort(data):
-
+    print(data.sort())
     pass
 
 
@@ -103,6 +112,9 @@ from datetime import date
 
 
 def days_from_date(point):
-    d1, d2 = date(days_from_date), date(2016, 4, 1)
-    str(d2 - d1)
+    a = date(2016, 4, 1)
+    print('days_from_date - a')
+
+    # d1, d2 = date(days_from_date), date(2016, 4, 1)
+    # str(d2 - d1)
     pass
