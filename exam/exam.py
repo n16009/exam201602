@@ -92,6 +92,7 @@ def calc_area_triangle(x, y, z):
 
 # 引数a,b,cを小数点以下2桁表示で空白切りで表示してください
 def point_two_digits(a, b, c):
+    print("{0:.2f}' '".format(a, b, c))
     pass
 
 
