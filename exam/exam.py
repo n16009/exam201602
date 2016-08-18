@@ -114,7 +114,4 @@ from datetime import date
 def days_from_date(point):
     a = date(2016, 4, 1)
     print('days_from_date - a')
-
-    # d1, d2 = date(days_from_date), date(2016, 4, 1)
-    # str(d2 - d1)
     pass
